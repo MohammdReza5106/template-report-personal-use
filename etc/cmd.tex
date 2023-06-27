@@ -35,6 +35,20 @@
 \usepackage{titletoc}
 \usepackage{tocloft}
 \usepackage{enumitem}
+\usepackage{lipsum} % for dummy text
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+\AddToShipoutPictureBG{% Add picture to background of every page
+    \begin{tikzpicture}[remember picture,overlay]
+    \draw[line width=1pt]
+        ([shift={(1cm,-1cm)}]current page.north west)
+        rectangle
+        ([shift={(-1cm,1cm)}]current page.south east);
+    \end{tikzpicture}
+}
+
+
 
 \usepackage{algorithm}
 % \usepackage[noend]{algpseudocode}
