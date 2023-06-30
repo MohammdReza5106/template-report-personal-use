@@ -27,66 +27,31 @@
   \item نیرو ها: $q(x)=10^4 * a\left(\frac{x}{L}\right)^b N / m$
 \end{itemize}
 از آن جایی که شماره دانشجویی من ۴۰۰۱۲۶۰۳۴  هست پس طبق فرض مسيله تکیه گاه های مسيله من یک سر گیر دار و یک سر تکیه گاه ساده در نظر گرفته می‌شود.
+\begin{itemize}
+	\item $a=3$
+	\item $b=4$
+\end{itemize}
+	
 \section{ روش حل:}
 \subsection{معرفی روش های حل:}
-	\subsubsection{روش \lr{Method of Adjoints}}
-	\subsubsection{روش \lr{GDQ}}
+\subsubsection{روش \lr{Method of Adjoints}}
 
-
-\begin{algorithm}[!h]
-\caption{
-نسخه اولیه $BLMS$
-}
-\label{blms1}
+%code space
 \begin{latin}
-\begin{algorithmic}[1]
-%\REQUIRE A point set $P$ in the plane.
-%\ENSURE A set $C$ of unit disks that cover $P$.
-\STATE $C = \varnothing$
-\STATE $I = \varnothing$
-\STATE $L =$ List of points in $P$ sorted from left to right
-\WHILE{$L$ is not empty}
-    \STATE $p =$ first element of $L$
-    \IF{$d(p,I) > 2$}
-        \STATE Cover $R(p)$ by 4 unit disks $c_{1}, c_{2}, c_{3}, c_{4}$
-        \STATE $C = C \cup \{ c_{1}, c_{2}, c_{3}, c_{4} \}$
-        \STATE $I = I \cup \{ p \}$
-    \ENDIF
-    \STATE $L = L - \{ p \}$
-\ENDWHILE
-\STATE \textbf{return} $C$
-\end{algorithmic}
+\begin{verbatim}
+print("Hello, world!")
+the new command 
+\end{verbatim}
 \end{latin}
-\end{algorithm}
 
-\begin{algorithm}[H]
-\singlespacing
-\caption{
-نسخه بهبود یافته $BLMS$ با تکنیک جاروی صفحه
-}
-\label{blms2}
+\subsubsection{روش \lr{GDQ}}
+
+%code space
 \begin{latin}
-\begin{algorithmic}[1]
-%\REQUIRE A point set $P$ in the plane.
-%\ENSURE A set $C$ of unit disks that cover $P$.
-\STATE Initialize an empty event queue $Q$. Insert the points in ascending order of their x-coordinates into $Q$.
-\STATE Initialize an empty BST status structure $T$.
-\STATE Initialize an empty list $C$.
-\WHILE{$Q$ is not empty}
-    \STATE Determine the next event point $p$ in $Q$ and delete it.
-    \IF {$p$ is an end-point}
-        \STATE Delete the start-point of the corresponding half-disk from $T$.
-    \ELSE
-        \STATE Find the 2 top and the 2 bottom neighbors of $p$ in $T$.
-        \IF {The distance between $p$ and all of these 4 neighbors is greater than 2}
-            \STATE Calculate center points of the 4 unit disks which cover half-disk of point $p$ and insert them into $C$.
-            \STATE Insert $p$ into $T$.
-            \STATE Insert the end-point $q=(p_x + 2, p_y)$ into $Q$.
-        \ENDIF
-    \ENDIF
-\ENDWHILE
-\STATE \textbf{return} $C$
-\end{algorithmic}
+\begin{verbatim}
+print("Hello, world!")
+the new command 
+\end{verbatim}
 \end{latin}
-\end{algorithm}
+
 \end{document}
